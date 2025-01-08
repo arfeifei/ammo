@@ -1,0 +1,40 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Comparison</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Price Comparison Chart</h1>
+        <table id="price-table">
+            <thead>
+                <tr>
+                    <th>Ammo Type</th>
+                    <th>Price per Round (CAD)</th>
+                    <th>Velocity (fps)</th>
+                    <th>Energy (ft.lbs.)</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+        <div class="sort-container">
+            <label for="sort-option">Sort by:</label>
+            <select id="sort-option" name="sort-option">
+                <option value="price">Price</option>
+                <option value="velocity">Velocity</option>
+                <option value="energy">Energy</option>
+            </select>
+        </div>
+        <button id="sort-button">Sort</button>
+        <canvas id="price-chart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
