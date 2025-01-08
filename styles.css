@@ -8,17 +8,17 @@ body {
     margin: 40px auto;
 }
 
-#price-table {
+#ammo-table {
     border-collapse: collapse;
     width: 100%;
 }
 
-#price-table th, #price-table td {
+#ammo-table th, #ammo-table td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 }
 
-#price-table th {
+#ammo-table th {
     background-color: #f0f0f0;
 }

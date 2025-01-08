@@ -36,7 +36,7 @@ function sortData(data, key) {
 ammoData.sort((a, b) => a.price - b.price);
 let sortedData = ammoData.slice();
 
-document.getElementById("sort-button").addEventListener("click", () => {
+document.getElementById("sort-option").addEventListener("change", () => {
     const selectedSortOption = document.getElementById("sort-option").value;
     if (selectedSortOption === "price") {
         sortData(sortedData, 'price');
@@ -67,7 +67,7 @@ function renderTable() {
 
 // update chart function
 function updateChart() {
-    const ctx = document.getElementById('price-chart').getContext('2d');
+    const ctx = document.getElementById('ammo-chart').getContext('2d');
     const selectElement = document.getElementById("sort-option");
     const selectedSortOption = selectElement.value;
     const selectedOptionText = selectElement.options[selectElement.selectedIndex].text;
