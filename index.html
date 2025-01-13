@@ -10,6 +10,14 @@
 <body>
     <div class="container">
         <h1>Ammo Comparison</h1>
+        <div class="sort-container">
+            <label for="sort-option">Sort by:</label>
+            <select id="sort-option" name="sort-option">
+                <option value="price">Price</option>
+                <option value="velocity">Velocity</option>
+                <option value="energy">Energy</option>
+            </select>
+        </div>
         <table id="ammo-table">
             <thead>
                 <tr>
@@ -22,14 +30,6 @@
             <tbody id="table-body">
             </tbody>
         </table>
-        <div class="sort-container">
-            <label for="sort-option">Sort by:</label>
-            <select id="sort-option" name="sort-option">
-                <option value="price">Price</option>
-                <option value="velocity">Velocity</option>
-                <option value="energy">Energy</option>
-            </select>
-        </div>
         <canvas id="ammo-chart"></canvas>
     </div>
 
