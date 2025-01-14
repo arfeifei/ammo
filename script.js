@@ -2,7 +2,7 @@
 let ammoData = [
     { type: '22LR', price: 0.09, velocity: 1235, energy: 135 },
     { type: '9mm', price: 0.33, velocity: 1150, energy: 338 },
-    { type: '7.62x39 (军剩)', price: 0.40, velocity: 2350, energy: 1495 },
+    { type: '7.62x39 (军剩)', price: 0.32, velocity: 2350, energy: 1495 },
     { type: '7.62x39 (红盒)', price: 0.52, velocity: 2350, energy: 1495 },
     { type: '7.62x39 (铜芯)', price: 1.2, velocity: 2350, energy: 1495 },
     { type: '.40 S&W', price: 0.64, velocity: 1000, energy: 400 },
