@@ -1,22 +1,18 @@
 // script.js
 let ammoData = [
-    { type: '22LR', price: 0.09, velocity: 1235, energy: 135 },
-    { type: '9mm', price: 0.33, velocity: 1150, energy: 338 },
-    { type: '7.62x39 (军剩)', price: 0.32, velocity: 2350, energy: 1495 },
-    { type: '7.62x39 (红盒)', price: 0.52, velocity: 2350, energy: 1495 },
-    { type: '7.62x39 (铜芯)', price: 1.2, velocity: 2350, energy: 1495 },
-    { type: '.40 S&W', price: 0.64, velocity: 1000, energy: 400 },
-    { type: '.45 ACP', price: 0.62, velocity: 830, energy: 352 },
-    { type: '223 Rem', price: 0.71, velocity: 3220, energy: 1266 },
-    { type: '556 Nato', price: 0.70, velocity: 3270, energy: 1306 },
-    { type: '.30 Carbine', price: 0.78, velocity: 2023, energy: 996 },
-    { type: '.357 Mag', price: 0.80, velocity: 1240, energy: 539 },
-    { type: '.44 Mag', price: 0.98, velocity: 1181, energy: 743 },
-    { type: '.308 Win', price: 1.28, velocity: 2780, energy: 2522 },
-    { type: '7.62x51', price: 1.42, velocity: 2780, energy: 2522 },
-    { type: '6.5 CreedMoore', price: 1.55, velocity: 2875, energy: 2386 },
-    { type: '.300 Win', price: 2.5, velocity: 2936, energy: 3456 },
-    { type: '.45-70 GOV', price: 2.9, velocity: 1850, energy: 2280 }
+    { type: '22LR', brand: 'CCI SV', url: 'https://g4cgunstore.com/product/cci-22lr-standard-velocity-40gr-lrn-5000rds/', price: 0.11, velocity: 1260, energy: 135},
+    { type: '9mm', brand: 'PMC 124gr', url: 'https://g4cgunstore.com/product/pmc-bronze-9mm-luger-124gr-fmj-50rds-2/', price: 0.33, velocity: 1150, energy: 338 },
+    { type: '7.62x39 Surplus', brand: 'Surplus', url: 'https://marstar.ca/product/chinese-surplus-ammo-7-62x39-123-grain-fmj-1100-rounds-w-stripper-clips/', price: 0.39, velocity: 2350, energy: 1495 },
+    { type: '7.62x39', brand: 'PMC 123gr', url: 'https://g4cgunstore.com/product/pmc-bronze-7-62x39-123gr-fmj-500rds/', price: 1.26, velocity: 2350, energy: 1495 },
+    { type: '223 Rem', brand: 'PMC 55gr', url: 'https://g4cgunstore.com/product/pmc-bronze-223rem-55gr-fmj-bt-1000rds/', price: 0.60, velocity: 3220, energy: 1266 },
+    { type: '357 Mag', brand: 'PMC 158gr', url: 'https://g4cgunstore.com/product/pmc-bronze-357-mag-158gr-jsp-1000rds/', price: 0.76, velocity: 1240, energy: 539 },
+    { type: '38 Sp', brand: 'PMC 132gr', url: 'https://g4cgunstore.com/product/pmc-bronze-38-special-132gr-fmj-1000rds/', price: 0.53, velocity: 917, energy: 232 },
+    { type: '44 Mag', brand: 'PMC 180gr', url: 'https://g4cgunstore.com/product/pmc-bronze-44-mag-180gr-jhp-500rds-2/', price: 1.12, velocity: 1750, energy: 1225 },
+    { type: '45 ACP', brand: 'Sellier & Bellot 230', url: 'https://g4cgunstore.com/product/sellier-bellot-45-acp-230gr-fmj-500rds/', price: 0.58, velocity: 830, energy: 352 },
+    { type: '45 Colt', brand: 'Sellier & Bellot 230', url: 'https://g4cgunstore.com/product/sellier-bellot-45-long-colt-230gr-jhp-50rds/', price: 1.09, velocity: 824, energy: 346 },
+    { type: '308 Win', brand: 'PMC 147gr', url: 'https://g4cgunstore.com/product/pmc-bronze-308win-147gr-fmj-bt-500rds/', price: 1.36, velocity: 2780, energy: 2522 },
+    { type: '30-06', brand: 'Federal American Eagle 150gr', url: 'https://g4cgunstore.com/product/fed-american-eagle-30-06sprg-150gr-fmj-bt-20rds-2/', price: 1.92, velocity: 2910, energy: 2820},
+    { type: '45-70 GOV', brand: 'Sellier & Bellot 405gr', url: 'https://g4cgunstore.com/product/sellier-bellot-45-70-gov-405gr-sp-240rds/', price: 2.4, velocity: 1509, energy: 2772 }
 ];
 
 const dataMap = {
@@ -57,6 +53,7 @@ function renderTable() {
         row.innerHTML =
             `
                 <td>${item.type}</td>
+                <td><a href="${item.url}" target="_blank">${item.brand}</a></td>
                 <td>${item.price}</td>
                 <td>${item.velocity}</td>
                 <td>${item.energy}</td>
